@@ -11,8 +11,8 @@ from openai import OpenAI
 import config
 
 client = OpenAI(
-    api_key="dummy",
-    base_url=config.API_BASE_URL,
+    api_key="YOUR_API_KEY",
+    base_url="YOUR_API_BASE_URL",
     max_retries=1,
     timeout=300.0,
 )
@@ -214,6 +214,8 @@ def check_photo(image_path: str) -> dict:
 
 
 if __name__ == "__main__":
+
+    # Select all photo from ./photo
     input_dir = Path("./photo")
     photos = sorted(input_dir.glob("*.jpg"))
 
